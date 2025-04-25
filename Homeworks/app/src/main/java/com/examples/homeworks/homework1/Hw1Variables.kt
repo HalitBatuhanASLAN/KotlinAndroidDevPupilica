@@ -1,0 +1,50 @@
+package com.examples.homeworks.homework1
+
+fun main() {
+    val city = "Ankara"
+    val country = "Turkey"
+    val phoneNumber = "+90 555 555 555 555"
+    val postalCode = 123456789
+    val email = "aaaaaaa"
+    val job = "computer engineering"
+    val stock = 1907
+    val customerName = "Our customer"
+    val balance = 1234.567
+    val birthday = "19.07.1907"
+    val salary = 30000
+    val meritalStatus = "single"
+    val commentOfProduct = "Product a great value for money"
+    val paymentDate = "23.04.2025"
+    val payment = true
+    val ordered = 500
+    val carModel = "Ford"
+    val bookName = "Nutuk"
+    val publishingDate = "10.10.2010"
+    val rateOfDiscount = "%25"
+    val numberOfRooms = 4
+    val latitude = "15degree"
+    val longitude = "23degree"
+    val productName = "Book"
+    val priceOfFood = 450
+    val brand = "Mavi"
+    val nameOfMusic = "izmirin daglarinda cicekler acar"
+    val durationOfVideo = "19.29"
+    val pointOfProduct = "4.7"
+    val pictureName = "my_photo.png"
+    val fileFormat = ".kt"
+    val color = "Yellow"
+    val colorCode = "#000080"
+    val phoneModel = "Iphone"
+    val screenSize = 13.4
+    val height = 92.6
+    val nationalDay = "may 19 the commemoration of atatürk youth and sports day"
+    val holiday = "Sunday"
+    val bookingDate = "16.06 Monday"
+    val streetName = "Ankara Street"
+    val busRoute= "490E"
+    val remainingMinutes = 13
+    val trackingCode = 1934234234
+    val couponDuration = "8 days"
+    val couponCode = "a43B323"
+    val billingAdress = "Ankara,Turkey"
+}
