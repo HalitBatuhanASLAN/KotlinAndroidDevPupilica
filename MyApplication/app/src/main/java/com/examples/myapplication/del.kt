@@ -5,7 +5,7 @@ fun main() {
     println(name)
     println("asffas $name")
     /*
-    * sfs
+    *
     * */
     val n = 13.2
     val a = n.toInt()
