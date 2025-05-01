@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyDreamCars</string>
+
+    <string name="diesel">Dizel</string>
+    <string name="automatic">Otomatik</string>
+    <string name="sedan">Sedan</string>
+    <string name="redColor">Kırmızı</string>
+    <string name="quadrifoglio">Quadrifoglio</string>
+
+    <string name="sportif">Sportif araba</string>
+    <string name="explenation">Eğer araba kullanmayı seviyorsanız bu araba en iyilerinden biridir.Gerçek bir araba sürmenin ne demek olduğunu anlaycaksınız.</string>
+    <string name="price">1.600.000 ₺</string>
+    <string name="garageButton">Garaja ekle</string>
+</resources>

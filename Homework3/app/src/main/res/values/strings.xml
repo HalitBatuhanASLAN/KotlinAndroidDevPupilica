@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Dream Cars</string>
+
+    <string name="diesel">Diesel</string>
+    <string name="automatic">Automatic</string>
+    <string name="sedan">Sedan</string>
+    <string name="redColor">Red</string>
+    <string name="quadrifoglio">Quadrifoglio</string>
+
+    <string name="sportif">Sportif car</string>
+    <string name="explenation">If you love driving it is the one of best cars.You will understand what is driving a real car.</string>
+    <string name="price">40.000$</string>
+    <string name="garageButton">Add garage</string>
+</resources>
