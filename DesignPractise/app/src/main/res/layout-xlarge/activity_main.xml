@@ -11,7 +11,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="200dp"
         android:layout_marginBottom="16dp"
         android:text="@string/price"
         android:textColor="@color/mainColor"
@@ -101,6 +101,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <!-- alt taraf-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -111,10 +113,8 @@
 
             android:textSize="26sp"
             tools:layout_editor_absoluteX="174dp"
-
-
             tools:layout_editor_absoluteY="14dp" />
-        <!-- alt taraf-->
+
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -175,7 +175,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="200dp"
         android:backgroundTint="@color/mainColor"
         android:text="@string/chart"
         android:textColor="@color/textColor1"

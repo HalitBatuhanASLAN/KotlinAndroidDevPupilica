@@ -3,5 +3,8 @@
     <style name="Base.Theme.DesignPractise" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!--  alt taraf ile durum çubuğu barının rengini belirledik  -->
+        <item name="android:statusBarColor">@color/mainColor</item>
     </style>
 </resources>

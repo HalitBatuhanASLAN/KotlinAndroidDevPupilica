@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pizza</string>
+    <string name="pizzaTitle">Etli Peynirli</string>
+    <string name="cheese">Peynir</string>
+    <string name="sucukYazi">Sucuk</string>
+    <string name="olive">Zeytin</string>
+    <string name="pepper">Biber</string>
+    <string name="duration">20 dk</string>
+    <string name="delivery">Teslimat</string>
+    <string name="explanation">Et sever, pizzanla tanışmaya hazırlan !</string>
+    <string name="price">174 ₺</string>
+    <string name="chart">SEPETE EKLE</string>
+</resources>
