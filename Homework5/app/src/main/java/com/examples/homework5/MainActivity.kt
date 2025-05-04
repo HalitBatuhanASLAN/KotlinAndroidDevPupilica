@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity()
         binding.resultText.text = result.toString()
         numList.clear()
         opList.clear()
-        numList.add(result)
+        newNum = result
     }
 
     private fun setUpOtherButtons()
@@ -166,6 +166,10 @@ class MainActivity : AppCompatActivity()
                 firstNum = 0
                 secondNum = 0
                 binding.resultText.text = "0"
+                result = 0
+                newNum = 0
+                numList.clear()
+                opList.clear()
             }
             binding.buttonResult ->
             {
