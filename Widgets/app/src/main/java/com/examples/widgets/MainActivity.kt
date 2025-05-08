@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.examples.widgets.databinding.ActivityMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -45,6 +47,19 @@ class MainActivity : AppCompatActivity() {
                 Log.e("Result(Show)",buttonYazi)
             }
             Log.e("Selected country",binding.autoCompleteTextView.text.toString())
+        }
+
+        binding.buttonAlert.setOnClickListener{
+            MaterialAlertDialogBuilder(this@MainActivity)
+                .setTitle("Title")
+                .setMessage("Message")
+                .setPositiveButton("Okay") { d,i->
+                    Toast.makeText(this,"Okay selected", Toast.LENGTH_SHORT).show()
+                }
+                .setNegativeButton("Cancel") { d,i->
+                    Toast.makeText(this,"Cancel selected", Toast.LENGTH_SHORT).show()
+                }
+                .show()
         }
     }
 }
