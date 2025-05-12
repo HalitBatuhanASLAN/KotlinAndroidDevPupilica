@@ -10,6 +10,19 @@
         android:layout_height="wrap_content"
         tools:context=".DetailFragment">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDetailPhotos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
@@ -154,18 +167,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:title="Details" />
 
-        <ImageView
-            android:id="@+id/ivCarDetail"
-            android:layout_width="405dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            tools:src="@drawable/ford_focus2019" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -175,7 +176,7 @@
             android:text="Price"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivCarDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/rvDetailPhotos" />
 
         <TextView
             android:id="@+id/tvPriceDetail"
@@ -186,7 +187,7 @@
             android:text="1.800.000₺"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivCarDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/rvDetailPhotos" />
 
         <TextView
             android:id="@+id/textView3"

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavArgs
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.examples.homework6.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
@@ -21,9 +22,6 @@ class DetailFragment : Fragment() {
          val bundle: DetailFragmentArgs by navArgs()
          val car = bundle.carObject;
 
-         binding.ivCarDetail.setImageResource(
-             resources.getIdentifier(car.picture,"drawable",requireContext().packageName)
-         )
          binding.tvPriceDetail.text = car.price.toString()
          binding.tvAnnouncementDate.text = car.announcementDate
          binding.tvBrand.text = car.brand
@@ -33,6 +31,12 @@ class DetailFragment : Fragment() {
          binding.tvCityDetail.text = car.city
          binding.tvExchange.text = car.exchange
          binding.tvKilometers.text = car.kilometers
+
+         var pList = car.pitureList
+
+         val photoAdapter = DetailPhotoAdapter(requireContext(), pList)
+         binding.rvDetailPhotos.adapter = photoAdapter
+         binding.rvDetailPhotos.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL)
 
          return binding.root
     }

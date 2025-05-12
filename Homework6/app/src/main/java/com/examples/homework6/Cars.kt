@@ -13,7 +13,8 @@ class Cars(
     var picture:String,
     var city:String,
     var exchange:String,
-    var kilometers:String
+    var kilometers:String,
+    var pitureList: List<Photos>
 ): java.io.Serializable
 {
 }
