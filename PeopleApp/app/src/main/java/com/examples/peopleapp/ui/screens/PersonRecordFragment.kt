@@ -6,11 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.examples.peopleapp.R
 import com.examples.peopleapp.databinding.FragmentPersonRecordBinding
+import com.examples.peopleapp.ui.viewModel.KisiKayitViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 
+@AndroidEntryPoint
 class PersonRecordFragment : Fragment() {
     private lateinit var binding: FragmentPersonRecordBinding
+    private lateinit var viewModel: KisiKayitViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,13 +27,16 @@ class PersonRecordFragment : Fragment() {
         binding.buttonRecord.setOnClickListener {
             val person_name = binding.editTextPersonName.text.toString()
             val person_tel_number = binding.editTextPersonTel.text.toString()
-            record(person_name,person_tel_number)
+            viewModel.record(person_name,person_tel_number)
         }
 
         return binding.root
     }
 
-    fun record(name : String,tel_number: String){
-        Log.e("Person added","${name}->${tel_number}")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val tempViewModel: KisiKayitViewModel by viewModels()
+        viewModel = tempViewModel
     }
+
 }

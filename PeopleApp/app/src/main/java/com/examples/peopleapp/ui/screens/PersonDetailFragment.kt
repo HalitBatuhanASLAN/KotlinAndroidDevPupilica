@@ -6,12 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.examples.peopleapp.R
 import com.examples.peopleapp.databinding.FragmentPersonDetailBinding
+import com.examples.peopleapp.ui.viewModel.KisiDetayViewModel
+import com.examples.peopleapp.ui.viewModel.KisiKayitViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 
+@AndroidEntryPoint
 class PersonDetailFragment : Fragment() {
     private lateinit var binding: FragmentPersonDetailBinding
+    private lateinit var viewModel: KisiDetayViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,13 +35,15 @@ class PersonDetailFragment : Fragment() {
         binding.buttonUpdate.setOnClickListener {
             val kisi_adi = binding.editTextPersonName.text.toString()
             val kisi_tel = binding.editTextPersonTel.text.toString()
-            update(gelenKisi.kisi_id,kisi_adi,kisi_tel)
+            viewModel.update(gelenKisi.kisi_id,kisi_adi,kisi_tel)
         }
 
         return binding.root
     }
 
-    fun update(kisi_id:Int,kisi_ad: String,kisi_tel: String) {
-        Log.e("Kisi güncelle","${kisi_id}->${kisi_ad}->${kisi_tel}")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val tempViewModel: KisiDetayViewModel by viewModels()
+        viewModel = tempViewModel
     }
 }
