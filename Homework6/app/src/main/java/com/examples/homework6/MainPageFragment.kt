@@ -52,7 +52,9 @@ class MainPageFragment : Fragment() {
             exchange = "No",
             kilometers = "123.456",
             pitureList = arrayListOf(
-                Photos("bmw3_2022")
+                Photos("bmw3_2022"),
+                Photos("bmw_1"),
+                Photos("bmw_2")
             )
         )
         carsList.add(c2)
@@ -70,7 +72,8 @@ class MainPageFragment : Fragment() {
             exchange = "Yes",
             kilometers = "123.456",
             pitureList = arrayListOf(
-                Photos("honda_civic")
+                Photos("honda_civic"),
+                Photos("civic_1")
             )
         )
         carsList.add(c3)
@@ -87,7 +90,9 @@ class MainPageFragment : Fragment() {
             city = "Bursa",
             exchange = "Yes",
             kilometers = "123.456",
-            pitureList = arrayListOf(Photos("toyota_corolla2023"), Photos("bmw3_2022"))
+            pitureList = arrayListOf(
+                Photos("mercedes_e2023"),
+                Photos("mercede_1"))
         )
         carsList.add(c4)
 
@@ -103,7 +108,9 @@ class MainPageFragment : Fragment() {
             city = "Antalya",
             exchange = "No",
             kilometers = "123.456",
-            pitureList = arrayListOf(Photos("toyota_corolla2023"), Photos("bmw3_2022"))
+            pitureList = arrayListOf(
+                Photos("ford_focus2019"),
+                Photos("focus_1"))
         )
         carsList.add(c5)
 
@@ -119,7 +126,9 @@ class MainPageFragment : Fragment() {
             city = "Adana",
             exchange = "Yes",
             kilometers = "123.456",
-            pitureList = arrayListOf(Photos("toyota_corolla2023"), Photos("bmw3_2022"))
+            pitureList = arrayListOf(
+                Photos("passat_2023"),
+                Photos("passat_1"))
         )
         carsList.add(c6)
 
@@ -135,7 +144,9 @@ class MainPageFragment : Fragment() {
             city = "Eskişehir",
             exchange = "No",
             kilometers = "123.456",
-            pitureList = arrayListOf(Photos("toyota_corolla2023"), Photos("bmw3_2022"))
+            pitureList = arrayListOf(
+                Photos("clio_2022"),
+                Photos("clio_1"))
         )
         carsList.add(c7)
 
@@ -151,7 +162,9 @@ class MainPageFragment : Fragment() {
             city = "Trabzon",
             exchange = "No",
             kilometers = "12000",
-            pitureList = arrayListOf(Photos("toyota_corolla2023"), Photos("bmw3_2022"))
+            pitureList = arrayListOf(
+                Photos("a6_2024"),
+                Photos("a6_1"))
         )
         carsList.add(c8)
 
@@ -167,7 +180,9 @@ class MainPageFragment : Fragment() {
             city = "Kayseri",
             exchange = "No",
             kilometers = "123.456",
-            pitureList = arrayListOf(Photos("toyota_corolla2023"), Photos("bmw3_2022"))
+            pitureList = arrayListOf(
+                Photos("tucson_2023"),
+                Photos("tucson_1"))
         )
         carsList.add(c9)
 
@@ -183,7 +198,9 @@ class MainPageFragment : Fragment() {
             city = "Konya",
             exchange = "No",
             kilometers = "123.456",
-            pitureList = arrayListOf(Photos("toyota_corolla2023"), Photos("bmw3_2022"))
+            pitureList = arrayListOf(
+                Photos("sportage_2022"),
+                Photos("sportage_1"))
         )
         carsList.add(c10)
 

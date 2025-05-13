@@ -1,4 +1,4 @@
-package com.examples.peopleapp.ui.screens
+package com.example.kisileruygulamasi.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -7,27 +7,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.examples.peopleapp.R
-import com.examples.peopleapp.databinding.FragmentPersonRecordBinding
-import com.examples.peopleapp.ui.viewModel.KisiKayitViewModel
+import com.example.kisileruygulamasi.R
+import com.example.kisileruygulamasi.databinding.FragmentKisiKayitBinding
+import com.example.kisileruygulamasi.ui.viewmodel.KisiKayitViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.lifecycle.HiltViewModel
 
 @AndroidEntryPoint
-class PersonRecordFragment : Fragment() {
-    private lateinit var binding: FragmentPersonRecordBinding
+class KisiKayitFragment : Fragment() {
+    private lateinit var binding: FragmentKisiKayitBinding
     private lateinit var viewModel: KisiKayitViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentKisiKayitBinding.inflate(inflater, container, false)
 
-        binding = FragmentPersonRecordBinding.inflate(inflater,container,false)
-
-        binding.buttonRecord.setOnClickListener {
-            val person_name = binding.editTextPersonName.text.toString()
-            val person_tel_number = binding.editTextPersonTel.text.toString()
-            viewModel.record(person_name,person_tel_number)
+        binding.buttonKaydet.setOnClickListener {
+            val kisi_ad = binding.editTextKisiAd.text.toString()
+            val kisi_tel = binding.editTextKisiTel.text.toString()
+            viewModel.kaydet(kisi_ad,kisi_tel)
         }
 
         return binding.root
@@ -38,5 +36,4 @@ class PersonRecordFragment : Fragment() {
         val tempViewModel: KisiKayitViewModel by viewModels()
         viewModel = tempViewModel
     }
-
 }

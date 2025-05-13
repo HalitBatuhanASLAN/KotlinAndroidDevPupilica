@@ -1,11 +1,10 @@
-package com.examples.peopleapp.ui.viewModel
+package com.example.kisileruygulamasi.ui.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.examples.peopleapp.data.entity.Kisiler
-import com.examples.peopleapp.data.repo.KisilerRepository
-import dagger.hilt.android.HiltAndroidApp
+import com.example.kisileruygulamasi.data.entity.Kisiler
+import com.example.kisileruygulamasi.data.repo.KisilerRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,12 +12,13 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class AnaSayfaViewModel @Inject constructor(var kisilerRepository: KisilerRepository) : ViewModel(){
+class AnasayfaViewModel @Inject constructor(var kisilerRepository:KisilerRepository) : ViewModel() {
     var kisilerListesi = MutableLiveData<List<Kisiler>>()
 
     init {
         kisileriYukle()
     }
+
     fun sil(kisi_id:Int){
         CoroutineScope(Dispatchers.Main).launch {
             kisilerRepository.sil(kisi_id)
@@ -26,20 +26,15 @@ class AnaSayfaViewModel @Inject constructor(var kisilerRepository: KisilerReposi
         }
     }
 
-    fun kisileriYukle(){
+    fun kisileriYukle() {
         CoroutineScope(Dispatchers.Main).launch {
-            kisilerListesi.value = kisilerRepository.kisileriYukle()
-            //trigger --- tetiekleme
+            kisilerListesi.value = kisilerRepository.kisileriYukle()//Tetikleme
         }
     }
 
-
-    fun ara(aramamKelimesi: String){
+    fun ara(aramaKelimesi:String){
         CoroutineScope(Dispatchers.Main).launch {
-            kisilerListesi.value = kisilerRepository.ara(aramamKelimesi)
-            //trigger --- tetiekleme
+            kisilerListesi.value = kisilerRepository.ara(aramaKelimesi)//Tetikleme
         }
     }
-
-    //liveData ile bir değişken değiştiğinde bunu uı göndeririz
 }
