@@ -1,7 +1,6 @@
 package com.example.kisileruygulamasi.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,13 +9,10 @@ import android.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.kisileruygulamasi.R
-import com.example.kisileruygulamasi.data.entity.Kisiler
 import com.example.kisileruygulamasi.databinding.FragmentAnasayfaBinding
 import com.example.kisileruygulamasi.ui.adapter.KisilerAdapter
 import com.example.kisileruygulamasi.ui.viewmodel.AnasayfaViewModel
-import com.example.kisileruygulamasi.ui.viewmodel.KisiDetayViewModel
 import com.example.kisileruygulamasi.utils.gecisYap
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.getValue

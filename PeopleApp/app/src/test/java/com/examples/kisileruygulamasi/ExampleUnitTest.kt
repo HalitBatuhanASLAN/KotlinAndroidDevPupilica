@@ -1,4 +1,4 @@
-package com.examples.peopleapp
+package com.examples.kisileruygulamasi
 
 import org.junit.Test
 

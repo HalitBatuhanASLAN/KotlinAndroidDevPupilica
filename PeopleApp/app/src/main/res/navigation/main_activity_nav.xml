@@ -1,34 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_activity_nav"
-    app:startDestination="@id/mainPageFragment">
-
+    app:startDestination="@id/anasayfaFragment">
     <fragment
-        android:id="@+id/mainPageFragment"
-        android:name="com.examples.peopleapp.ui.screens.MainPageFragment"
-        android:label="fragment_main_page"
-        tools:layout="@layout/fragment_main_page" >
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.kisileruygulamasi.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa" tools:layout="@layout/fragment_anasayfa">
         <action
-            android:id="@+id/peopleToDetailPassing"
-            app:destination="@id/personDetailFragment" />
+            android:id="@+id/kisiDetayGecis"
+            app:destination="@id/kisiDetayFragment"/>
         <action
-            android:id="@+id/peopleToRecordPassing"
-            app:destination="@id/personRecordFragment" />
+            android:id="@+id/kisiKayitGecis"
+            app:destination="@id/kisiKayitFragment"/>
     </fragment>
     <fragment
-        android:id="@+id/personDetailFragment"
-        android:name="com.examples.peopleapp.ui.screens.PersonDetailFragment"
-        android:label="fragment_person_detail"
-        tools:layout="@layout/fragment_person_detail" >
+        android:id="@+id/kisiDetayFragment"
+        android:name="com.example.kisileruygulamasi.ui.fragment.KisiDetayFragment"
+        android:label="fragment_kisi_detay" tools:layout="@layout/fragment_kisi_detay">
         <argument
             android:name="kisi"
-            app:argType="com.examples.peopleapp.data.entity.Kisiler" />
+            app:argType="com.example.kisileruygulamasi.data.entity.Kisiler"/>
     </fragment>
     <fragment
-        android:id="@+id/personRecordFragment"
-        android:name="com.examples.peopleapp.ui.screens.PersonRecordFragment"
-        android:label="fragment_person_record"
-        tools:layout="@layout/fragment_person_record" />
+        android:id="@+id/kisiKayitFragment"
+        android:name="com.example.kisileruygulamasi.ui.fragment.KisiKayitFragment"
+        android:label="fragment_kisi_kayit" tools:layout="@layout/fragment_kisi_kayit"/>
 </navigation>

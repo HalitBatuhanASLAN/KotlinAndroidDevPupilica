@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.examples.datastorekullanimi.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,6 +19,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val appPref = AppPref(this)
 
+        //burada suspend olduğu için fonksiyonumuz Coroutine kullandık
+        CoroutineScope(Dispatchers.Main).launch {
+            appPref.sil()
+            var gelenSayac = appPref.oku()
+
+            appPref.kayit(++gelenSayac)
+            binding.textViewSayac.text = "Açılış sayısı : ${gelenSayac}"
+        }
     }
 }
