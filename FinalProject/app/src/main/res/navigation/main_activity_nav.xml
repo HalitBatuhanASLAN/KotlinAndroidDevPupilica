@@ -16,6 +16,22 @@
         <action
             android:id="@+id/action_mainPageFragment_to_productCardFragment"
             app:destination="@id/productCardFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/zoom_slide_in"
+            app:exitAnim="@anim/zoom_slide_out"
+            app:popEnterAnim="@anim/zoom_slide_in"
+            app:popExitAnim="@anim/zoom_slide_out" />
+
+        <!-- 🌪️ Flip Animasyonu -->
+        <action
+            android:id="@+id/action_mainFragment_to_chartFragment"
+            app:destination="@id/productCardFragment"
+            app:enterAnim="@anim/flip_in"
+            app:exitAnim="@anim/flip_out"
+            app:popEnterAnim="@anim/flip_in"
+            app:popExitAnim="@anim/flip_out" />
     </fragment>
     <fragment
         android:id="@+id/productCardFragment"

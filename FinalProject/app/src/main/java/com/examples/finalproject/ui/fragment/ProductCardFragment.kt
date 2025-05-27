@@ -2,12 +2,16 @@ package com.examples.finalproject.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.PopupWindow
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.airbnb.lottie.LottieAnimationView
 import com.examples.finalproject.R
 import com.examples.finalproject.databinding.FragmentProductCardBinding
 import com.examples.finalproject.ui.adapter.ChartAdapter
@@ -25,6 +29,11 @@ class ProductCardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentProductCardBinding.inflate(layoutInflater,container,false)
+
+        binding.btnCheckout.setOnClickListener {
+            showSuccessPopup()
+        }
+
         return binding.root
     }
 
@@ -69,6 +78,35 @@ class ProductCardFragment : Fragment() {
 
         viewmodel.totalPrice.observe(viewLifecycleOwner) { price ->
             binding.tvTotalPrice.text = "₺${String.format("%.2f", price)}"
+        }
+    }
+
+    private fun showSuccessPopup() {
+        try {
+            val popupView = LayoutInflater.from(requireContext())
+                .inflate(R.layout.popup_simple_success, null)
+
+            val popup = PopupWindow(
+                popupView,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                true
+            )
+
+            popup.isOutsideTouchable = true
+            popup.isFocusable = true
+
+            popup.showAtLocation(binding.root, Gravity.CENTER, 0, 0)
+
+            popupView.postDelayed({
+                if (popup.isShowing) {
+                    popup.dismiss()
+                }
+            }, 3000)
+
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Hata: ${e.message}", Toast.LENGTH_LONG).show()
+            Log.e("POPUP_ERROR", "Hata detayı", e)
         }
     }
 

@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="fab_gradient">#4CAF50</color>
 
+    <color name="green">#4CAF50</color>
+    <color name="gray">#757575</color>
+
 </resources>

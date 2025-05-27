@@ -67,16 +67,69 @@ class ProductDetailFragment : Fragment() {
         }
 
         binding.floatingActionButton.setOnClickListener {
+            it.animate()
+                .scaleX(1.2f)
+                .scaleY(1.2f)
+                .setDuration(100)
+                .withEndAction {
+                    it.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(100)
+                        .start()
+                }
+                .start()
             orderCount++
-            binding.totalTV.text = orderCount.toString()
-            binding.tvTotalPrice.text = (orderCount * (product.yemek_fiyat)).toString()
+
+            binding.totalTV.animate()
+                .scaleX(1.3f)
+                .scaleY(1.3f)
+                .setDuration(150)
+                .withEndAction {
+                    binding.totalTV.text = orderCount.toString()
+                    binding.tvTotalPrice.text = (orderCount * (product.yemek_fiyat)).toString()
+
+                    binding.totalTV.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(150)
+                        .start()
+                }
+                .start()
         }
 
         binding.floatingActionButton2.setOnClickListener {
             if (orderCount > 0) {
+                it.animate()
+                    .scaleX(1.2f)
+                    .scaleY(1.2f)
+                    .setDuration(100)
+                    .withEndAction {
+                        it.animate()
+                            .scaleX(1f)
+                            .scaleY(1f)
+                            .setDuration(100)
+                            .start()
+                    }
+                    .start()
+
                 orderCount--
-                binding.totalTV.text = orderCount.toString()
-                binding.tvTotalPrice.text = (orderCount * (product.yemek_fiyat)).toString()
+
+                binding.totalTV.animate()
+                    .scaleX(1.3f)
+                    .scaleY(1.3f)
+                    .setDuration(150)
+                    .withEndAction {
+                        binding.totalTV.text = orderCount.toString()
+                        binding.tvTotalPrice.text = (orderCount * (product.yemek_fiyat)).toString()
+
+                        binding.totalTV.animate()
+                            .scaleX(1f)
+                            .scaleY(1f)
+                            .setDuration(150)
+                            .start()
+                    }
+                    .start()
             }
         }
 
@@ -108,11 +161,42 @@ class ProductDetailFragment : Fragment() {
                         Toast.LENGTH_SHORT).show()
                 }
 
-                findNavController().popBackStack()
 
+                playAddToCartAnimations()
             } else {
                 Toast.makeText(requireContext(), "Lütfen adet seçiniz!", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+    private fun playAddToCartAnimations() {
+        binding.tvAddChart.animate()
+            .scaleX(0.9f)
+            .scaleY(0.9f)
+            .setDuration(100)
+            .withEndAction {
+                binding.tvAddChart.animate()
+                    .scaleX(1f)
+                    .scaleY(1f)
+                    .setDuration(500)
+                    .start()
+            }
+            .start()
+
+        binding.foodIv.animate()
+            .scaleX(0.3f)
+            .scaleY(0.3f)
+            .translationY(-500f)
+            .alpha(0.5f)
+            .setDuration(800)
+            .withEndAction {
+                binding.foodIv.animate()
+                    .scaleX(1f)
+                    .scaleY(1f)
+                    .translationY(0f)
+                    .alpha(1f)
+                    .setDuration(500)
+                    .start()
+            }
+            .start()
     }
 }
