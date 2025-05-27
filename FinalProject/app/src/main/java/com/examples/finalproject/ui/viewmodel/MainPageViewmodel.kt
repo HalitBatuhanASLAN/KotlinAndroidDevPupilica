@@ -32,4 +32,6 @@ class MainPageViewmodel @Inject constructor(var productRepository: ProductReposi
             }catch (e: Exception){ }
         }
     }
+
+
 }

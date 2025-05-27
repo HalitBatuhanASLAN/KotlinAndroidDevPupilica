@@ -8,4 +8,6 @@ class ProductRepository(var productDataSource: ProductDataSource) {
     suspend fun uploadProduct() : List<Products> = productDataSource.uploadProduct()
 
     suspend fun search(searchWord:String) : List<Products> = productDataSource.search(searchWord)
+
+
 }

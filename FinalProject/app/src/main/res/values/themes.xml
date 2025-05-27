@@ -1,9 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.FinalProject" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+
+    <style name="Theme.FinalProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#FF6B35</item>
+        <item name="colorPrimaryVariant">#FF8A50</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">#4CAF50</item>
+        <item name="colorSecondaryVariant">#388E3C</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <item name="android:windowBackground">#F8F9FA</item>
+
+        <item name="android:textColorPrimary">#1A1A1A</item>
+        <item name="android:textColorSecondary">#9E9E9E</item>
     </style>
 
-    <style name="Theme.FinalProject" parent="Base.Theme.FinalProject" />
+    <style name="ToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="SearchEditTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#1A1A1A</item>
+        <item name="android:textColorHint">#9E9E9E</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="ModernCardStyle">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardBackgroundColor">#FFFFFF</item>
+    </style>
+
+
+    <style name="ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="ModernCard" parent="CardView">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardBackgroundColor">#FFFFFF</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="ModernButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/modern_add_cart_bg</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="CartToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+
 </resources>

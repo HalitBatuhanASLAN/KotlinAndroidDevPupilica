@@ -3,7 +3,6 @@ package com.examples.finalproject.utils
 import android.view.View
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
-import androidx.navigation.Navigation.findNavController
 
 fun Navigation.passing(it: View,id:Int){
     findNavController(it).navigate(id)
