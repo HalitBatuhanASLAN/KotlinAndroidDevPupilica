@@ -59,7 +59,6 @@ class ProductDetailViewmodel @Inject constructor(var chartRepository: ChartRepos
 
     val existingCartItem = MutableLiveData<ProChart?>()
 
-    // Sepette bu ürün var mı kontrol et
     fun checkProductInCart(yemek_adi: String, kullanici_adi: String) {
         CoroutineScope(Dispatchers.Main).launch {
             try {
@@ -72,7 +71,6 @@ class ProductDetailViewmodel @Inject constructor(var chartRepository: ChartRepos
         }
     }
 
-    // 🆕 Sepetteki ürünü güncelle
     fun updateCartItem(
         sepet_yemek_id: Int,
         yemek_adi: String,

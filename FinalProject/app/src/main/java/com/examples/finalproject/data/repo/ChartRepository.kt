@@ -17,8 +17,6 @@ class ChartRepository(var chartDataSource: ChartDataSource) {
     suspend fun deleteFromChart(sepet_yemek_id:Int,
                                 kullanici_adi: String) = chartDataSource.deleteFromChart(sepet_yemek_id,kullanici_adi)
 
-
-    // ChartRepository.kt içine ekle
     suspend fun updateCartItem(
         sepet_yemek_id: Int,
         yemek_adi: String,
@@ -27,12 +25,8 @@ class ChartRepository(var chartDataSource: ChartDataSource) {
         yemek_siparis_adet: Int,
         kullanici_adi: String
     ): CRUDAnswer {
-        // API'den güncelleme endpoint'i varsa onu kullan
-        // Yoksa sil + ekle yöntemi
         return try {
-            // Önce eski kaydı sil
             deleteFromChart(sepet_yemek_id, kullanici_adi)
-            // Sonra yeni adet ile ekle
             addChart(yemek_adi, yemek_resim_adi, yemek_fiyat, yemek_siparis_adet, kullanici_adi)
         } catch (e: Exception) {
             CRUDAnswer(0, "Güncelleme hatası: ${e.message}")

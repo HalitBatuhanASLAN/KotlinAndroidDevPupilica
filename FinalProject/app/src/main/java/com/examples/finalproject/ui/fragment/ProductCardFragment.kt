@@ -11,7 +11,6 @@ import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.airbnb.lottie.LottieAnimationView
 import com.examples.finalproject.R
 import com.examples.finalproject.databinding.FragmentProductCardBinding
 import com.examples.finalproject.ui.adapter.ChartAdapter
