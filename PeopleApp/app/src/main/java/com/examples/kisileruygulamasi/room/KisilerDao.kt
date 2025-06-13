@@ -1,6 +1,7 @@
 package com.examples.kisileruygulamasi.room
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
@@ -22,4 +23,11 @@ interface KisilerDao {
 
     @Update
     suspend fun guncelle(kisi : Kisiler)
+
+    @Delete
+    suspend fun sil(kisi: Kisiler)
+
+    //alt tarftaki kodda aşşağıdan yukarıya parametre alma işlemi uygulandı
+    @Query("SELECT * FROM kisiler WHERE kisi_ad LIKE '%'|| :aramaKelimesi ||'%'")
+    suspend fun ara(aramaKelimesi : String): List<Kisiler>
 }
